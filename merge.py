@@ -13,7 +13,7 @@ def get_merged_branches():
     raw_results = check_output('git branch ', shell=True)
     print raw_results
     return [b.strip() for b in raw_results.split('\n')
-    print b
+			print b
         if b.strip() and not b.startswith('*') and (b.strip() != 'master' or b.strip() != 'dummy') ]
 
 
