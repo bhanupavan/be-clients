@@ -10,7 +10,7 @@ import sys
 
 def get_merged_branches():
     ''' a list of merged branches, not couting the current branch or master '''
-    raw_results = check_output('git branch --merged', shell=True)
+    raw_results = check_output('git branch ', shell=True)
     print raw_results
     return [b.strip() for b in raw_results.split('\n')
         if b.strip() and not b.startswith('*') and b.strip() != 'master']
