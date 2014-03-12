@@ -11,8 +11,8 @@ import sys
 def get_remote_branches():
     ''' a list of merged branches, not couting the current branch or master '''
     raw_results = check_output('git branch ', shell=True)
-    for branch_name in raw_results.split('\n')
-    print raw_results
+    for branch_name in raw_results.split('\n'):
+		print branch_name
     #~ return [b.strip() for b in raw_results.split('\n')
 			#~ if b.strip() and not b.startswith('*') and (b.strip() != 'master' or b.strip() != 'dummy') ]
 
